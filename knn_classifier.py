@@ -50,16 +50,7 @@ def classify_conditions():
             environment = label_encoder.inverse_transform([prediction])[0]
             
             print(f"\nClassification Result: {environment}")
-            
-            # Ask if user wants to continue
-            continue_input = input("\nDo you want to classify another set of conditions? (yes/no): ").lower()
-            if continue_input != 'yes':
-                break
-                
-        except ValueError:
-            print("Please enter valid numerical values.")
-        except Exception as e:
-            print(f"An error occurred: {e}")
+
 
 if __name__ == "__main__":
     print("Environmental Condition Classifier using KNN")
